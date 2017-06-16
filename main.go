@@ -41,9 +41,9 @@ func main() {
 			s.F(func(i int, x float64, y ...float64) float64 {
 				switch i {
 				case 0:
-					return -a1*y[0] - b2*y[1] + _h1
+					return -a1*y[0] - b2*y[1] + h1*math.Sin(_h1/h1*math.Pi*10*x)
 				case 1:
-					return -b1*y[0] - a2*y[1] + _h2
+					return -b1*y[0] - a2*y[1] + h2*math.Cos(_h2/h2*math.Pi*10*x)
 				}
 				return 0
 			}, 2)
